@@ -21,8 +21,14 @@ public class ClassATest extends TestCase {
     lgy.subPkg.ClassA classA;
 
     @Test
-    public void test_add(){
+    public void test_add_right(){
         int result = classA.add(1, 2);
         Assert.assertEquals(3, result);
+    }
+
+    @Test
+    public void test_add_wrong(){
+        int result = classA.add(1, 2);
+        Assert.assertEquals(4, result);
     }
 }

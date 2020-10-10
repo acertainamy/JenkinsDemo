@@ -21,8 +21,14 @@ public class ClassBTest extends TestCase {
     lgy.subPkg.ClassB classB;
 
     @Test
-    public void test_add(){
+    public void test_subtract_right(){
         int result = classB.subtract(3, 1);
+        Assert.assertEquals(2, result);
+    }
+
+    @Test
+    public void test_subtract_wrong(){
+        int result = classB.subtract(3, 2);
         Assert.assertEquals(2, result);
     }
 }
